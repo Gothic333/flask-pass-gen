@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    {% block meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% endblock %}
+    {% block links %}
+    <link rel="icon" href="{{url_for('static', filename='img/icon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    {% endblock %}
+    <title>{% block title %}Базовая страница{% endblock %}</title>
+</head>
+<body>
+    <main class="d-flex flex-column h-100">
+        <article>
+            {% block content %}
+                no content
+            {% endblock %}
+        </article>
+        {% block footer %}
+            <footer class="navbar navbar-light">
+                <div class="col p-2"></div>
+                <div class="col p-2 text-center">© PASSGEN 2021 Naumenko VI</div>
+                <div class="col p-2 text-end">Github: <a href="https://github.com/Gothic333">https://github.com/Gothic333</a></div>
+            </footer>
+        {% endblock %}
+    </main>
+
+{% block scripts %}
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.6.0.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static', filename='js/scripts.js')}}"></script>
+{% endblock %}
+
+</body>
+</html>

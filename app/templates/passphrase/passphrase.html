@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Пароль на основе парольных фраз{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center h-100">
+    <section class="section container w-50 py-2 mt-auto mb-auto shadow-sm bg-white rounded">
+        <h1 class="section-title text-center mb-3">Пароль по парольной фразе</h1>
+        <form class="row g-3">
+            <div class="mb-3 col-md-6">
+                <label for="phrase_length" class="form-label">Слов в фразе</label>
+                <input type="number" class="form-control" name="phrase_length" id="phrase_length" min=1 value="2" disabled>
+            </div>
+            <div class="mb-3 col-md-6">
+                <label for="char_number" class="form-label">Сколько символов слова использовать</label>
+                <input type="number" class="form-control" name="char_number" id="char_number" min=1 value="2">
+            </div>
+            <div class="mb-3 col-md-12 text-center">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="phrase_lang" id="phrase_lang_ru" value="rus" checked>
+                <label class="form-check-label" for="phrase_lang_ru">Русский язык</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="phrase_lang" id="phrase_lang_en" value="eng" disabled>
+                <label class="form-check-label" for="phrase_lang_en">Английский язык</label>
+              </div>
+            </div>
+        </form>
+        <input type="text" class="form-control mb-3 text-center" id="phrase-out-field">
+        <button id="phrase-gen-btn" class="btn btn-primary w-100 mb-3" disabled>Сгенерировать парольную фразу</button>
+        <input type="text" class="form-control mb-3 text-center" readonly id="pass-out-field">
+        <button id="passphrase-gen-btn" class="btn btn-success w-100 mb-3">Сгенерировать пароль</button>
+        <a class="btn btn-secondary w-50 d-block mx-auto" href="{{ url_for('home.index') }}">Вернуться</a>
+    </section>
+</div>
+{% endblock %}

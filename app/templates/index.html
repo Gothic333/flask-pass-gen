@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Генератор паролей{% endblock %}
+
+{% block content %}
+<h1 class="home-menu-title text-center mt-5">Генератор паролей</h1>
+<div class="home-menu-container container d-flex flex-column flex-wrap justify-content-center border-primary">
+    <div class="row h-75">
+        <a href="{{ url_for('simplepass.index') }}" class="home-menu-item-1 col d-flex flex-column justify-content-center align-items-center btn">
+            <h2 class="text-white">Пароль по алфавиту</h2>
+        </a>
+        <a href="{{ url_for('passphrase.index') }}" class="home-menu-item-2 col d-flex flex-column justify-content-center align-items-center btn">
+            <h2 class="text-white">Пароль по парольной фразе</h2>
+        </a>
+    </div>
+</div>
+{% endblock %}

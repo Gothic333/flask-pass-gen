@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Пароль на основе алфавита{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center h-100">
+    <section class="section container w-50 py-2 mt-auto mb-auto shadow-sm bg-white rounded">
+        <h1 class="section-title text-center mb-3">Пароль по пользовательскому алфавиту</h1>
+        <form>
+            <div class="mb-3">
+                <label for="pass_length" class="form-label">Длина пароля</label>
+                <input type="number" class="form-control" name="pass_length" id="pass_length" min=1 value="2">
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="english_lower_char" checked value="english_lower">
+                <label class="form-check-label" for="english_lower_char">Английские строчные буквы (a-z)</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="english_upper_char" checked value="english_upper">
+                <label class="form-check-label" for="english_upper_char">Английские заглавные буквы (A-Z)</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="russian_lower_char" value="russian_lower">
+                <label class="form-check-label" for="russian_lower_char">Русские строчные буквы (а-я)</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="russian_upper_char" value="russian_upper">
+                <label class="form-check-label" for="russian_upper_char">Русские заглавные буквы (А-Я)</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="numbers" checked value="numbers">
+                <label class="form-check-label" for="numbers">Цифры (0-9)</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="special_symbols" value="symbols">
+                <label class="form-check-label" for="special_symbols">Специальные символы (!@#$%^&*()-_+=;:,./?\|`~[]{})</label>
+            </div>
+        </form>
+        <input type="text" class="form-control my-3 text-center fw-bold" readonly id="pass-out-field">
+        <button id="simplepass-gen-btn" class="btn btn-success w-100 mb-3">Сгенерировать пароль</button>
+        <a class="btn btn-secondary w-50 d-block mx-auto" href="{{ url_for('home.index') }}">Вернуться</a>
+    </section>
+</div>
+{% endblock %}

@@ -37,3 +37,10 @@ footer {
 .home-menu-item-2:hover, .home-menu-item-2:active {
     background-color: #0a8f08 !important;
 }
+
+@media (max-width: 767px) {
+    section.section {
+        width: 100% !important;
+    }
+    
+ }

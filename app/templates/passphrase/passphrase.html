@@ -8,7 +8,7 @@
         <form class="row g-3">
             <div class="mb-3 col-md-6">
                 <label for="phrase_length" class="form-label">Слов в фразе</label>
-                <input type="number" class="form-control" name="phrase_length" id="phrase_length" min=1 value="2" disabled>
+                <input type="number" class="form-control" name="phrase_length" id="phrase_length" min=1 value="2">
             </div>
             <div class="mb-3 col-md-6">
                 <label for="char_number" class="form-label">Сколько символов слова использовать</label>
@@ -26,7 +26,7 @@
             </div>
         </form>
         <input type="text" class="form-control mb-3 text-center" id="phrase-out-field">
-        <button id="phrase-gen-btn" class="btn btn-primary w-100 mb-3" disabled>Сгенерировать парольную фразу</button>
+        <button id="phrase-gen-btn" class="btn btn-primary w-100 mb-3">Сгенерировать парольную фразу</button>
         <input type="text" class="form-control mb-3 text-center" readonly id="pass-out-field">
         <button id="passphrase-gen-btn" class="btn btn-success w-100 mb-3">Сгенерировать пароль</button>
         <a class="btn btn-secondary w-50 d-block mx-auto" href="{{ url_for('home.index') }}">Вернуться</a>

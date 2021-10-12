@@ -71,3 +71,11 @@ $(document).on('click', '#passphrase-gen-btn', function(ev){
         $("#pass-out-field").val(password);
     }
 })
+
+$(document).on('click', '#phrase-gen-btn', function(ev){
+    let word_number = parseInt($("#phrase_length").val());
+    $.get(document.location.href + "/api/"+ word_number, function(data){
+        let phrase = data['phrase'];
+        $("#phrase-out-field").val(phrase);
+    }, 'json');
+})

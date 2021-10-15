@@ -38,6 +38,14 @@ footer {
     background-color: #0a8f08 !important;
 }
 
+#pass-out-field {
+    min-height: 2.4rem;
+    -ms-user-select: all;
+    -moz-user-select: all;
+    -webkit-user-select: all;
+    user-select: all;
+}
+
 @media (max-width: 767px) {
     section.section {
         width: 100% !important;

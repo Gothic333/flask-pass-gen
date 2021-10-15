@@ -32,14 +32,14 @@ $(document).on('click', '#simplepass-gen-btn', function(ev){
     let alphabet = "";
     let charsets = $("input.form-check-input:checked");
     if (!charsets.length){
-        $("#pass-out-field").val("Выберите хотя бы один набор значенний для алфавита");
+        $("#pass-out-field").text("Выберите хотя бы один набор значенний для алфавита");
     }
     else {
         for (let el of charsets){
             alphabet += charset_hashset[el.value];
         };
         let password = simple_passgen(alphabet, length);
-        $("#pass-out-field").val(password);
+        $("#pass-out-field").text(password);
     }
 })
 
@@ -64,11 +64,11 @@ $(document).on('click', '#passphrase-gen-btn', function(ev){
     let phrase = $("#phrase-out-field").val().trim();
 
     if (!phrase.length){
-        $("#pass-out-field").val("Введите парольную фразу");
+        $("#pass-out-field").text("Введите парольную фразу");
     }
     else {
         let password = passphrase_passgen(phrase, char_number);
-        $("#pass-out-field").val(password);
+        $("#pass-out-field").text(password);
     }
 })
 

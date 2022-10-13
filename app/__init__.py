@@ -12,10 +12,10 @@ def create_app(config_name):
     app.register_blueprint(home_blueprint)
 
     from .blueprints.passphrase import passphrase as passphrase_blueprint
-    app.register_blueprint(passphrase_blueprint)
+    app.register_blueprint(passphrase_blueprint, url_prefix='/passphrase')
 
     from .blueprints.simplepass import simplepass as simplepass_blueprint
-    app.register_blueprint(simplepass_blueprint)
+    app.register_blueprint(simplepass_blueprint, url_prefix='/simplepass')
 
     from .blueprints.errors import errors as errors_blueprint
     app.register_blueprint(errors_blueprint)

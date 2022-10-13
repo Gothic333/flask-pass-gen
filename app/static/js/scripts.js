@@ -1,4 +1,3 @@
-
 function simple_passgen(alphabet, length){
     if(window.crypto && window.crypto.getRandomValues) {
 		return Array(length)

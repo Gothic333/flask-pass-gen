@@ -18,7 +18,7 @@ class DevelopmentConfig(Config):
 
     @classmethod
     def init_app(cls, app):
-        print('!!!Запуск приложения в режиме отладки.!!!')
+        print('!!!Run application in development mode..!!!')
 
 
 class TestingConfig(Config):
@@ -26,7 +26,7 @@ class TestingConfig(Config):
 
     @classmethod
     def init_app(cls, app):
-        print('!!!Запуск приложения в режиме тестрирвования.!!!')
+        print('!!!Run application in testing mode.!!!')
 
 
 class ProductionConfig(Config):

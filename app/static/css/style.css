@@ -1,5 +1,5 @@
 html, body{
-    height:100% !important;
+    height: 100% !important;
     background-image: url('../img/back.png');
 }
 
@@ -7,17 +7,13 @@ a:hover{
     text-decoration: none !important;
 }
 
-article {
+main, .home-menu-container{
     flex: 1 0 auto;
 }
 
 footer {
     flex: 0 0 auto;
     background-color: #efefef;
-}
-
-.home-menu-container {
-    height:76vh;
 }
 
 .home-menu-item-1 {

@@ -14,20 +14,20 @@
     <title>{% block title %}Базовая страница{% endblock %}</title>
 </head>
 <body>
-    <main class="d-flex flex-column h-100">
-        <article>
+    <div class="d-flex flex-column h-100">
+        <main class="d-flex flex-column">
             {% block content %}
                 no content
             {% endblock %}
-        </article>
+        </main>
         {% block footer %}
-            <footer class="navbar navbar-light">
-                <div class="col p-2 d-none d-sm-block"></div>
-                <div class="col p-2 text-center">© PASSGEN 2021 Naumenko VI</div>
-                <div class="col p-2 text-end">Github: <a href="https://github.com/Gothic333">https://github.com/Gothic333</a></div>
-            </footer>
+        <footer class="navbar navbar-light">
+            <div class="col p-2 d-none d-sm-block"></div>
+            <div class="col p-2 text-center">© PASSGEN 2021 Naumenko VI</div>
+            <div class="col p-2 text-end">Github: <a href="https://github.com/Gothic333">https://github.com/Gothic333</a></div>
+        </footer>
         {% endblock %}
-    </main>
+    </div>
 
 {% block scripts %}
 <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.6.0.min.js')}}"></script>

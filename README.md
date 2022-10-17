@@ -38,7 +38,7 @@ pip install -r requirements.txt
 flask run
 ```
 Поддержка:
-* Деплой на Heroku (Prockfile)
+* Деплой на Heroku (Procfile)
 * Docker (в работе)
 
 #### Попробовать: https://flask-simple-passgen.herokuapp.com/
